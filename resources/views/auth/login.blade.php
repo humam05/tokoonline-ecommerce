@@ -3,20 +3,6 @@
 @section('title', 'Login')
 
 @section('content')
-<style>
-    @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
-    @keyframes float-delayed { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(-5deg); } }
-    @keyframes slide-up { from { opacity: 0; transform: translateY(30px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
-    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-    @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.15); } 50% { box-shadow: 0 0 40px rgba(99,102,241,0.3); } }
-    .animate-float { animation: float 6s ease-in-out infinite; }
-    .animate-float-delayed { animation: float-delayed 7s ease-in-out infinite; }
-    .animate-slide-up { animation: slide-up 0.6s ease-out both; }
-    .animate-slide-up-2 { animation: slide-up 0.6s ease-out 0.15s both; }
-    .animate-slide-up-3 { animation: slide-up 0.6s ease-out 0.3s both; }
-    .btn-shimmer { background-size: 200% auto; animation: shimmer 3s linear infinite; }
-    .card-glow { animation: pulse-glow 3s ease-in-out infinite; }
-</style>
 
 <div class="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-8">
     <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50"></div>

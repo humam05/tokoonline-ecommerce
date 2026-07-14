@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'TokoOnline') - TokoOnline</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
+        @keyframes float-delayed { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(-5deg); } }
+        @keyframes slide-up { from { opacity: 0; transform: translateY(30px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.15); } 50% { box-shadow: 0 0 40px rgba(99,102,241,0.3); } }
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 7s ease-in-out infinite; }
+        .animate-slide-up { animation: slide-up 0.6s ease-out both; }
+        .animate-slide-up-2 { animation: slide-up 0.6s ease-out 0.15s both; }
+        .animate-slide-up-3 { animation: slide-up 0.6s ease-out 0.3s both; }
+        .animate-fade-in { animation: fade-in 0.8s ease-out both; }
+        .btn-shimmer { background-size: 200% auto; animation: shimmer 3s linear infinite; }
+        .card-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .card-glow-hover:hover { animation: pulse-glow 2s ease-in-out infinite; }
+        .field-delay-1 { animation: slide-up 0.5s ease-out 0.1s both; }
+        .field-delay-2 { animation: slide-up 0.5s ease-out 0.2s both; }
+        .field-delay-3 { animation: slide-up 0.5s ease-out 0.3s both; }
+        .field-delay-4 { animation: slide-up 0.5s ease-out 0.4s both; }
+    </style>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">

@@ -5,8 +5,8 @@
 @section('content')
 <div class="flex flex-col lg:flex-row gap-6">
     <aside class="w-full lg:w-64 shrink-0">
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
-            <h2 class="font-bold text-lg text-gray-800 mb-4">Admin Panel</h2>
+        <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-4">
+            <h2 class="font-bold text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">Admin Panel</h2>
             <nav class="space-y-1">
                 <x-admin.sidebar active="dashboard" />
             </nav>
@@ -14,67 +14,70 @@
     </aside>
 
     <main class="flex-1 min-w-0">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 animate-slide-up">Dashboard</h1>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up" style="animation: slide-up 0.6s ease-out 0.05s both;">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-500">Total Produk</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1">{{ $totalProducts }}</p>
+                        <p class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mt-1">{{ $totalProducts }}</p>
                     </div>
-                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl flex items-center justify-center shadow-sm">
                         <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up" style="animation: slide-up 0.6s ease-out 0.1s both;">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-500">Total Pesanan</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1">{{ $totalOrders }}</p>
+                        <p class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent mt-1">{{ $totalOrders }}</p>
                     </div>
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-green-100 rounded-xl flex items-center justify-center shadow-sm">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up" style="animation: slide-up 0.6s ease-out 0.15s both;">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-500">Total User</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1">{{ $totalUsers }}</p>
+                        <p class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mt-1">{{ $totalUsers }}</p>
                     </div>
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl flex items-center justify-center shadow-sm">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/></svg>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up" style="animation: slide-up 0.6s ease-out 0.2s both;">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-500">Pendapatan</p>
-                        <p class="text-3xl font-bold text-gray-800 mt-1">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</p>
+                        <p class="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mt-1">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</p>
                     </div>
-                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center shadow-sm">
+                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                <h2 class="font-bold text-gray-800 mb-4">Pesanan Terbaru</h2>
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up-2">
+                <h2 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    Pesanan Terbaru
+                </h2>
                 @if($recentOrders->isEmpty())
                     <p class="text-gray-500 text-sm">Belum ada pesanan.</p>
                 @else
                     <div class="space-y-3">
                         @foreach($recentOrders as $order)
-                            <div class="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                            <div class="flex items-center justify-between py-2 border-b border-gray-100 last:border-0 hover:bg-indigo-50/30 px-2 -mx-2 rounded-lg transition">
                                 <div>
                                     <p class="text-sm font-medium text-gray-800">#{{ $order->id }} - {{ $order->user->name }}</p>
                                     <p class="text-xs text-gray-500">{{ $order->created_at->format('d M Y H:i') }}</p>
@@ -90,12 +93,15 @@
                             </div>
                         @endforeach
                     </div>
-                    <a href="{{ route('admin.orders.index') }}" class="mt-4 inline-block text-sm text-indigo-600 hover:underline">Lihat semua &rarr;</a>
+                    <a href="{{ route('admin.orders.index') }}" class="mt-4 inline-block text-sm text-indigo-600 hover:text-indigo-700 font-medium hover:underline transition">&rarr; Lihat semua</a>
                 @endif
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                <h2 class="font-bold text-gray-800 mb-4">Pendapatan Bulanan ({{ date('Y') }})</h2>
+            <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-6 card-glow-hover animate-slide-up-3">
+                <h2 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Pendapatan Bulanan ({{ date('Y') }})
+                </h2>
                 @if($revenueByMonth->isEmpty())
                     <p class="text-gray-500 text-sm">Belum ada data pendapatan.</p>
                 @else
@@ -103,8 +109,8 @@
                         @foreach($revenueByMonth as $month => $total)
                             <div class="flex items-center gap-3">
                                 <span class="text-sm text-gray-600 w-20">{{ date('F', mktime(0, 0, 0, $month, 1)) }}</span>
-                                <div class="flex-1 bg-gray-100 rounded-full h-2.5">
-                                    <div class="bg-indigo-500 h-2.5 rounded-full" style="width: {{ ($total / $revenueByMonth->max()) * 100 }}%"></div>
+                                <div class="flex-1 bg-gray-100 rounded-full h-2.5 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-2.5 rounded-full transition-all duration-1000" style="width: {{ ($total / $revenueByMonth->max()) * 100 }}%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-gray-700 w-28 text-right">Rp {{ number_format($total, 0, ',', '.') }}</span>
                             </div>

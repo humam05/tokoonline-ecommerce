@@ -5,8 +5,8 @@
 @section('content')
 <div class="flex flex-col lg:flex-row gap-6">
     <aside class="w-full lg:w-64 shrink-0">
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
-            <h2 class="font-bold text-lg text-gray-800 mb-4">Admin Panel</h2>
+        <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 p-4">
+            <h2 class="font-bold text-lg bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">Admin Panel</h2>
             <nav class="space-y-1">
                 <x-admin.sidebar active="products" />
             </nav>
@@ -14,17 +14,17 @@
     </aside>
 
     <main class="flex-1 min-w-0">
-        <div class="flex items-center justify-between mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">Kelola Produk</h1>
-            <a href="{{ route('admin.products.create') }}" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+        <div class="flex items-center justify-between mb-6 animate-slide-up">
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Kelola Produk</h1>
+            <a href="{{ route('admin.products.create') }}" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-xl hover:from-indigo-700 hover:to-purple-700 transition flex items-center gap-2 shadow-sm hover:shadow-md btn-shimmer">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
                 Tambah Produk
             </a>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-x-auto">
+        <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-sm border border-gray-100 overflow-x-auto card-glow-hover animate-slide-up-2">
             <table class="w-full min-w-[640px]">
-                <thead class="bg-gray-50">
+                <thead class="bg-gradient-to-r from-gray-50 to-indigo-50/50">
                     <tr>
                         <th class="px-4 py-3 text-left text-sm font-semibold text-gray-600">ID</th>
                         <th class="px-4 py-3 text-left text-sm font-semibold text-gray-600">Produk</th>
@@ -36,12 +36,12 @@
                 </thead>
                 <tbody class="divide-y divide-gray-100">
                     @foreach($products as $product)
-                        <tr class="hover:bg-gray-50 transition">
+                        <tr class="hover:bg-indigo-50/30 transition">
                             <td class="px-4 py-3 text-sm text-gray-600">#{{ $product->id }}</td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center gap-3">
                                     @if($product->image)
-                                        <img src="{{ $product->image_url }}" alt="" class="w-10 h-10 rounded-lg object-cover">
+                                        <img src="{{ $product->image_url }}" alt="" class="w-10 h-10 rounded-lg object-cover shadow-sm">
                                     @endif
                                     <p class="font-medium text-gray-800">{{ $product->name }}</p>
                                 </div>
@@ -61,13 +61,13 @@
                             </td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center justify-center gap-2">
-                                    <a href="{{ route('admin.products.edit', $product) }}" class="text-indigo-600 hover:bg-indigo-50 p-1.5 rounded transition">
+                                    <a href="{{ route('admin.products.edit', $product) }}" class="text-indigo-600 hover:bg-indigo-50 p-1.5 rounded-lg transition">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                                     </a>
                                     <form action="{{ route('admin.products.destroy', $product) }}" method="POST" onsubmit="return confirm('Hapus produk ini?')">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-red-500 hover:bg-red-50 p-1.5 rounded transition">
+                                        <button type="submit" class="text-red-500 hover:bg-red-50 p-1.5 rounded-lg transition">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                                         </button>
                                     </form>
@@ -82,7 +82,7 @@
             @endif
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 animate-fade-in">
             {{ $products->links() }}
         </div>
     </main>
