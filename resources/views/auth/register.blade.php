@@ -24,9 +24,9 @@
 
 <div class="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-8">
     <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-pink-50"></div>
-    <div class="absolute top-10 right-20 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
-    <div class="absolute bottom-10 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed"></div>
-    <div class="absolute top-1/3 left-1/3 w-48 h-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+    <div class="absolute top-10 right-20 w-48 md:w-80 h-48 md:h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+    <div class="absolute bottom-10 left-20 w-48 md:w-72 h-48 md:h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed"></div>
+    <div class="absolute top-1/3 left-1/3 w-32 md:w-48 h-32 md:h-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
 
     <div class="w-full max-w-md relative z-10 px-4">
         <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/50 p-8 card-glow animate-slide-up">

@@ -3,8 +3,8 @@
 @section('title', 'Detail Pesanan #' . $order->id)
 
 @section('content')
-<div class="flex gap-6">
-    <aside class="w-64 shrink-0">
+<div class="flex flex-col lg:flex-row gap-6">
+    <aside class="w-full lg:w-64 shrink-0">
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
             <h2 class="font-bold text-lg text-gray-800 mb-4">Admin Panel</h2>
             <nav class="space-y-1">
@@ -48,8 +48,8 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
-            <table class="w-full">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-x-auto mb-6">
+            <table class="w-full min-w-[500px]">
                 <thead class="bg-gray-50">
                     <tr>
                         <th class="px-4 py-3 text-left text-sm font-semibold text-gray-600">Produk</th>

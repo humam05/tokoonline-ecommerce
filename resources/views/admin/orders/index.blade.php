@@ -3,8 +3,8 @@
 @section('title', 'Kelola Pesanan')
 
 @section('content')
-<div class="flex gap-6">
-    <aside class="w-64 shrink-0">
+<div class="flex flex-col lg:flex-row gap-6">
+    <aside class="w-full lg:w-64 shrink-0">
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
             <h2 class="font-bold text-lg text-gray-800 mb-4">Admin Panel</h2>
             <nav class="space-y-1">
@@ -16,8 +16,8 @@
     <main class="flex-1 min-w-0">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Kelola Pesanan</h1>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-            <table class="w-full">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-x-auto">
+            <table class="w-full min-w-[640px]">
                 <thead class="bg-gray-50">
                     <tr>
                         <th class="px-4 py-3 text-left text-sm font-semibold text-gray-600">Invoice</th>

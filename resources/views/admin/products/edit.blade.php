@@ -3,8 +3,8 @@
 @section('title', 'Edit Produk')
 
 @section('content')
-<div class="flex gap-6">
-    <aside class="w-64 shrink-0">
+<div class="flex flex-col lg:flex-row gap-6">
+    <aside class="w-full lg:w-64 shrink-0">
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
             <h2 class="font-bold text-lg text-gray-800 mb-4">Admin Panel</h2>
             <nav class="space-y-1"><x-admin.sidebar active="products" /></nav>
@@ -41,7 +41,7 @@
                     @error('description') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
                 </div>
 
-                <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1.5">Harga (Rp)</label>
                         <input type="number" name="price" value="{{ old('price', $product->price) }}" required min="0"
