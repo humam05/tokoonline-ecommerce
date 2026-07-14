@@ -126,7 +126,7 @@ users ──┐
 
 ```bash
 # 1. Clone project
-cd D:\kerjaan\joki\tes\ecommerce
+cd berikan lokasi folder anda
 
 # 2. Install PHP dependencies
 composer install
