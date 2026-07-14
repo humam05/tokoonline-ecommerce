@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         $cartItems = CartItem::where('user_id', Auth::id())
@@ -29,10 +24,14 @@ class CartController extends Controller
     {
         $data = $request->validate([
             'product_id' => 'required|exists:products,id',
-            'quantity' => 'integer|min:1|max:99',
+            'quantity' => 'nullable|integer|min:1|max:99',
         ]);
 
         $product = Product::findOrFail($data['product_id']);
+
+        if ($product->stock < 1) {
+            return redirect()->back()->with('error', 'Stok produk habis!');
+        }
 
         $cartItem = CartItem::updateOrCreate(
             [

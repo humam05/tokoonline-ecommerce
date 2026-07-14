@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function checkout()
     {
         $cartItems = CartItem::where('user_id', Auth::id())
